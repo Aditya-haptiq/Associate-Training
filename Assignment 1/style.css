@@ -96,7 +96,6 @@ nav ul li a {
     line-height: 70px;
     letter-spacing: -1px;
     color:  #1E0E62;
-;
 }
 
 
@@ -170,12 +169,13 @@ nav ul li a {
 
 .feature-card.special-card {
     width: 250px;
-    height: 112px;
+    height: 110px;
     font-size: 18px;
-    line-height: 1.4;
     border-right: 2px solid #EBEAED;
     border-left: 2px solid #EBEAED;
     color: #EBEAED;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 55px;
+    padding-right: 55px;
 }
+
+

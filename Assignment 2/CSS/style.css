@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+
+   * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  color: #21243d;
+}
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      color: #21243D;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+.navbar {
+  padding: 27px 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Heebo', sans-serif;
+  color:rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 33px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 500;
+  color:rgba(0, 0, 0, 1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section  */
+.hero {
+  padding: 130px 0;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroText {
+  flex: 0.8;
+}
+
+.heroText h1 {
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  line-height: 72px;
+}
+
+.heroText p {
+  font-size: 16px;
+  margin-bottom: 32px;
+  max-width: 500px;
+  line-height: 28px;
+}
+
+.downloadBtn {
+  display: inline-block;
+  background-color: #ff6464;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 30px;
+  text-decoration: none;
+}
+
+
+
+.heroImage {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: -12px 12px 0 0 #edf7fa;
+  flex-shrink: 0;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.recentPosts {
+  background-color: rgba(237, 247, 250, 1);
+  padding: 40px 0;
+}
+
+.recentPostsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.recentPostsHeader h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.viewAllBtn {
+  font-size: 16px;
+  font-weight: 400;
+  color: #00A8CC;
+  text-decoration: none;
+}
+
+.recentPostsGrid {
+  display: flex;
+  height: 396px;
+  /*justify-content: first baseline; */
+  gap: 32px;
+  /* flex-wrap: wrap; */
+}
+
+.recentPostCard {
+  background-color: #fff;
+  padding: 28px 34px;
+  border-radius: 4px;
+
+}
+
+.cardHeading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.cardMeta {
+  font-size: 18px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #6d6d6d;
+}
+
+.cardMeta hr {
+  height: 16px;
+  width: 1px;
+  background-color: #000;
+  border: none;
+}
+
+.recentPostCard p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+.featuredWorks {
+  padding: 32px 0;
+}
+
+.featuredWorksHeader {
+  margin-bottom: 32px;
+}
+
+.featuredWorksList {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.workItem {
+  display: flex;
+  gap: 34px;
+  padding: 24px 0;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+.workImage {
+  
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.workImage img {
+  width: 246px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.workDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.workHeading {
+  font-weight: 700;
+  font-size: 34px;
+  color: rgba(33, 36, 61, 1);
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.workMeta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.workYear {
+  background-color: #142850;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.workCategory {
+  font-size: 20px;
+  color: #8695A4;
+  font-weight: 400;
+}
+
+.workDetails p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243D;
+}
+
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.socialIconsWrapper {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.socialIconImg {
+  width: 30px;
+  height: 30px;
+}
+
+.footerCopyright p {
+  font-size: 14px;
+  color: rgba(33, 36, 61, 1);
+  margin: 0;
+}
