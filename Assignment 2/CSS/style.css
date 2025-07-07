@@ -4,7 +4,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
   font-family: "Heebo", sans-serif;
+=======
+ 
+>>>>>>> 09b4ede (change in style)
 }
 
     body {
@@ -14,11 +18,11 @@
       line-height: 1.6;
     }
 
-    .container {
+    /* .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
-    }
+    } */
 
 
 .navbar {
@@ -146,12 +150,13 @@
 
 .recentPostsGrid {
   display: flex;
-  height: 396px;
-  /*justify-content: first baseline; */
+  /* height: 396px; */
   gap: 32px;
-  /* flex-wrap: wrap; */
 }
-
+.border{
+  border:1px solid rgba(0, 0, 0, 1); 
+  height: 12px;
+}
 .recentPostCard {
   background-color: #fff;
   padding: 28px 34px;
@@ -191,6 +196,10 @@
   padding: 32px 0;
 }
 
+.featuredWorks h2 {
+  font-weight: 400;
+  font-size: 22px;
+}
 .featuredWorksHeader {
   margin-bottom: 32px;
 }
@@ -209,26 +218,26 @@
 }
 
 .workImage {
-  
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.workImage img {
   width: 246px;
   height: 180px;
+  border-radius: 6px;
+  overflow: hidden;
   object-fit: cover;
 }
+
 
 .workDetails {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%S;
 }
 
 .workHeading {
   font-weight: 700;
-  font-size: 34px;
+  font-size: 30px;
   color: rgba(33, 36, 61, 1);
   text-decoration: none;
   margin-bottom: 15px;
@@ -278,6 +287,7 @@ footer {
 
 .socialIconImg {
   width: 30px;
+   transition: transform 0.3s ease, opacity 0.3s ease;
   height: 30px;
 }
 
@@ -286,3 +296,9 @@ footer {
   color: rgba(33, 36, 61, 1);
   margin: 0;
 }
+
+.socialIconImg:hover {
+  transform: scale(1.2);       
+  opacity: 0.8;                
+}
+
