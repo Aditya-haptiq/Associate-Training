@@ -109,12 +109,18 @@ body{
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  display: flex;
-  align-items: center;
+
+  
+  
 }
 
 .heroContent {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  height: 100%;
+  /* max-width: 600px; */
   color: #ffffff;
 }
 
