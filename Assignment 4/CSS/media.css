@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+font-family: "Montserrat",sans-serif;
+
+}
+
+@media (max-width: 768px) {
+  .navBarWrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .brandRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logoText {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .iconGroup {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .navIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+  .authButtons {
+    display: none;
+  }
+
+  .heroHeading {
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+  }
+
+  .heroSubtext {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 24px;
+  }
+
+  .featuresSection {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .featuresGrid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .featureItem img {
+    width: 64px;
+    height: auto;
+  }
+
+  .testimonialGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonialCard {
+    width: 100%;
+    max-width: 350px;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .userImageWrap {
+    display: none; 
+  }
+
+  .testimonialContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .projectGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectCard {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .consultingContent {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 24px;
+  }
+
+  .footerGrid {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footerBottomContent {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .socialIcons img {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
+
+
+

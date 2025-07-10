@@ -5,29 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insurance Landing Page</title>
     <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/media.css">
   </head>
   <body>
-    <!-- Header Navigation -->
-    <header class="headerSection">
-      <div class="container navBarWrap">
-        <div class="logoText">BrandName</div>
-        <nav class="navBar">
-          <ul class="navList">
-            <li><a href="#" class="navLink">Home</a></li>
-            <li><a href="#" class="navLink">Product</a></li>
-            <li><a href="#" class="navLink">Pricing</a></li>
-            <li><a href="#" class="navLink">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="authButtons">
-          <a href="#" class="loginButton">Login</a>
-          <a href="#" class="signupButton">
-            Become a member
-            <img src="./Images/arrow.png" alt="arrow" class="signupArrow" />
-          </a>
-        </div>
+ <!-- Header Navigation -->
+<header class="headerSection">
+  <div class="container navBarWrap">
+    <!-- Wrap Brand and Icons Together -->
+    <div class="brandRow">
+      <div class="logoText">BrandName</div>
+      <div class="iconGroup">
+        <img src="./Images/search.png" alt="search" class="navIcon" />
+        <img src="./Images/cart.png" alt="" class="navIcon" />
+        <img src="./Images/menu.png" alt="menu" class="navIcon" />
       </div>
-    </header>
+    </div>
+
+    <nav class="navBar">
+      <ul class="navList">
+        <li><a href="#" class="navLink">Home</a></li>
+        <li><a href="#" class="navLink">Product</a></li>
+        <li><a href="#" class="navLink">Pricing</a></li>
+        <li><a href="#" class="navLink">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="authButtons">
+      <a href="#" class="loginButton">Login</a>
+      <a href="#" class="signupButton">
+        Become a member
+        <img src="./Images/arrow.png" alt="arrow" class="signupArrow" />
+      </a>
+    </div>
+  </div>
+</header>
+
+
 
     <section class="heroSection">
       <div class="container heroContent">
@@ -37,7 +50,8 @@
             Insurance Service
           </h1>
           <p class="heroSubtext">
-            We know how large objects will act, but things on a small scale.
+            We know how large objects will act, <br>
+            but things on a small scale.
           </p>
           <div class="heroButtons">
             <a href="#" class="btnPrimary">Get Quote Now</a>
@@ -70,7 +84,7 @@
 
     <section class="testimonialsSection">
       <div class="container">
-        <h2 class="sectionTitle">Industry</h2>
+        <h2 class="sectionTitle">What Clients Say</h2>
         <p class="sectionSubtitle">
           Problems trying to resolve the conflict between <br />
           the two major realms of Classical physics: Newtonian mechanics
@@ -118,10 +132,9 @@
 
     <section class="projectsSection">
       <div class="container">
-        <h2 class="sectionTitle">Industry</h2>
+        <h2 class="sectionTitle">We Are Optimists Who Love To Work Toghether</h2>
         <p class="sectionSubtitle">
-          Problems trying to resolve the conflict between <br />
-          the two major realms of Classical physics: Newtonian mechanics
+          Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics 
         </p>
 
         <div class="projectGrid">

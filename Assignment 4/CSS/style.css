@@ -109,8 +109,6 @@ body{
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
-  
   
 }
 
@@ -118,9 +116,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: flex-start; */
   height: 100%;
-  /* max-width: 600px; */
   color: #ffffff;
 }
 
@@ -524,4 +520,166 @@ body{
   height: 24px;
   margin-left: 20px;
   cursor: pointer;
+}
+
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iconGroup {
+  display: none; 
+}
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  /* HEADER */
+
+  .navBarWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .navBar {
+    display: none; /* hide full nav */
+  }
+
+  .authButtons {
+    display: none; /* hide login/signup */
+  }
+
+.iconGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.logoText {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.brandRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  /* HERO SECTION */
+  .heroHeading {
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+  }
+
+  .heroSubtext {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 24px;
+  }
+
+  /* FEATURES SECTION */
+  .featuresSection {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .featuresGrid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .featureItem img {
+    width: 64px;
+    height: auto;
+  }
+
+  /* TESTIMONIAL SECTION */
+  .testimonialGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonialCard {
+    width: 100%;
+    max-width: 350px;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+ .userImageWrap {
+    display: none;
+  }
+
+  .testimonialContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* PROJECTS SECTION */
+  .projectGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectCard {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  /* CONSULTING SECTION */
+  .consultingContent {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 24px;
+  }
+
+  /* FOOTER */
+  .footerGrid {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footerBottomContent {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .socialIcons img {
+    margin-left: 0;
+    margin-right: 12px;
+  }
 }
