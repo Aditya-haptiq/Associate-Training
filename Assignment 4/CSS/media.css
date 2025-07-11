@@ -62,6 +62,7 @@ font-family: "Montserrat",sans-serif;
 
   .heroSubtext {
     font-size: 20px;
+    font-size: 500;
     line-height: 30px;
     text-align: center;
   }
@@ -73,11 +74,14 @@ font-family: "Montserrat",sans-serif;
     margin-bottom: 64px;
   }
 
-  .btnPrimary,
+  .btnPrimary{
+    background: #23A6F0;
+    padding: 10px 36px;
+
+  }
   .btnSecondary {
-    width: 100%;
-    max-width: 300px;
-    padding: 12px 24px;
+    color: #23A6F0;
+    padding: 10px 36px;
   }
 
   .featuresSection {
@@ -91,10 +95,37 @@ font-family: "Montserrat",sans-serif;
   }
 
   .featureItem img {
-    width: 64px;
-    height: auto;
+    width: 72px;
+    height: 59.29px;
+  }
+  .featureItem h3 {
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.1px;
   }
 
+.featureItem p {
+max-width: 234px;
+  }
+
+.sectionTitle {
+  text-align: center;
+  max-width: 302px;
+  margin: 0 auto;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  margin-bottom: 30px;
+}
+
+.sectionSubtitle{
+    max-width: 262px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 60px;
+}
   .testimonialGrid {
     flex-direction: column;
     align-items: center;
@@ -102,15 +133,17 @@ font-family: "Montserrat",sans-serif;
 
   .testimonialCard {
     width: 100%;
-    max-width: 350px;
+    max-width: 342px;
     flex-direction: column;
     text-align: center;
+    max-height: 408px;
     padding: 40px 20px;
   }
 
   .userImageWrap {
     display: none; 
   }
+
 
   .testimonialContent {
     align-items: center;
@@ -123,10 +156,35 @@ font-family: "Montserrat",sans-serif;
   }
 
   .projectCard {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
+    max-width: 342px;
+    height: 452px;
+    overflow-x: hidden;
   }
+
+.projectContent .category{
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0.2px;
+font-weight: 600;
+  }
+
+  .projectContent .title{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    font-weight: 700;
+  }
+  .btnView{
+    height: 42px;
+    width: 165px;
+    background-color: #23A6F0;
+    padding: 10px 36px;
+  }
+
+  .sectionTitle{
+    max-width: 212px;
+  }
+
 
   .consultingContent {
     flex-direction: column;
@@ -134,12 +192,32 @@ font-family: "Montserrat",sans-serif;
     text-align: center;
   }
 
+  .consultingText h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    max-width: 239px;
+  }
+
+    .consultingText p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    max-width: 160px;
+  }
   .contactBtn {
     width: 100%;
-    max-width: 300px;
+    max-width: 160px;
+    background-color: #23A6F0;
     padding: 12px 24px;
   }
 
+
+  .footerColumn{
+    padding: 5px 87px;
+  }
   .footerGrid {
     flex-direction: column;
     gap: 32px;
