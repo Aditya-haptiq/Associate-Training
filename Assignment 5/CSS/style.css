@@ -52,6 +52,7 @@ hr {
 
 .navLinks a {
   font-size: 20px;
+  font-weight: 500;
 }
 
 .heroSection {
@@ -116,6 +117,12 @@ hr {
   padding: 32px 0;
 }
 
+.postHeader h3{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+}
+
 .postHeader,
 .featuredHeader {
   display: flex;
@@ -125,6 +132,9 @@ hr {
 }
 
 .viewAllLink {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
   color: #00a8cc;
 }
 
@@ -142,8 +152,9 @@ hr {
 }
 
 .postTitle {
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 700;
+  line-height: 100%;
   margin-bottom: 24px;
 }
 
@@ -158,7 +169,11 @@ hr {
   padding: 32px 0;
 }
 
-
+.featuredHeader h3{
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 60px;
+}
 .workItem {
   display: flex;
   gap: 34px;
@@ -189,7 +204,8 @@ img{
   display: inline-block;
   margin-bottom: 14px;
     font-weight: 700;
-  font-size: 34px;
+    line-height: 100%;
+  font-size: 30px;
 }
 
 .workMeta {
@@ -207,7 +223,10 @@ img{
   border-radius: 25px;
   font-size: 18px;
 }
-
+.workContent p{
+font-weight: 400;
+font-size: 16px;
+}
 .workTag {
   display: inline-block;
   font-size: 20px;
@@ -230,14 +249,10 @@ img{
   
 }
 
-.socialIcon {
-  font-size: 30px;
-}
+.socialLinks a{
+    font-size: 30px;
+  }
 
-/* .socialIcon:hover {
-  color: #D92231;
-  transition: color 0.25s ease-in-out;
-} */
 
 .footerNote p {
   font-size: 16px;
@@ -354,22 +369,19 @@ img{
     gap: 20px;
   }
 
-  .socialIcon {
-    font-size: 26px;
-  }
+
+  
 
   .footerNote p {
     font-size: 14px;
+    font-weight: 400;
   }
 }
 
 @media (max-width: 992px) {
- 
-
   .workItem {
     flex-direction: column;
   }
-
   .workImage {
     width: 100%;
   }
