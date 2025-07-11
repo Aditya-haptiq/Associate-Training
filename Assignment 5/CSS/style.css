@@ -12,7 +12,10 @@ a {
   color: #21243d;
 }
 
-
+.workItem{
+  padding: 30px 0px;
+  border-bottom:1px solid #E0E0E0 ;
+}
 hr {
   outline: none;
   border: 0.5px solid #8695A4;
@@ -57,7 +60,7 @@ hr {
 
 .heroSection {
   max-width: 100%;
-  padding: 130px 0;
+  /* padding: 130px 0; */
 }
 
 .heroTitle {
@@ -81,6 +84,7 @@ hr {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
+  margin-bottom: 88px;
   padding: 12px 30px;
 }
 
@@ -99,8 +103,8 @@ hr {
 }
 
 .profileImage {
-  width: 350px;
-  height: 350px;
+  width: 243px;
+  height: 243px;
   overflow: hidden;
   border-radius: 100%;
   box-shadow: -12px 12px 0 0 #edf7fa;
@@ -253,6 +257,9 @@ font-size: 16px;
     font-size: 30px;
   }
 
+.socialLinks a :hover{
+    color: #ff6464;
+  }
 
 .footerNote p {
   font-size: 16px;
@@ -368,9 +375,6 @@ font-size: 16px;
   .socialLinks {
     gap: 20px;
   }
-
-
-  
 
   .footerNote p {
     font-size: 14px;
