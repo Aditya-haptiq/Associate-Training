@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');* {
+
+
+.customHeader{
+    background-color: #74C69D;
+}
+
+.letter-spacing-wide {
+  letter-spacing: 5px;
+}
+
+.logoImage {
+  height: 40px;
+}
+
+.heroImageBox {
+  max-width: 644px;
+  height: 378px;
+  overflow: hidden;
+}
+
+
+/* partner */
+.ls-5 {
+  letter-spacing: 5px;
+}
+
+.font-crimson {
+  font-family: 'Crimson Text', serif;
+}
+
+.partner-logo {
+  max-width: 160px;
+  max-height: 50px;
+  object-fit: cover;
+}
+
+
+.imageWrap{
+   max-width: 599px; 
+   height: 431px;
+    object-fit: cover"
+}
+
+.font-crimson {
+  font-family: 'Crimson Text', serif;
+}
+
+.featureImageBox {
+  max-width: 599px;
+  height: 431px;
+  overflow: hidden;
+}
+
+.featureImageBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.featureHeading {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  margin-bottom: 16px;
+}
+
+.featureDescription {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 125%;
+  color: #212529cc; 
+  margin-bottom: 16px;
+}
+
+.sectionButton {
+  width: 170px;
+  height: 48px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+}
+
+
+/* Team Section  */
+.sectionHeading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.sectionLabel {
+  font-size: 16px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #28a745; 
+  margin-bottom: 12px;
+}
+
+.team-desc {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.teamCard {
+  width: 270px;
+  height: 299px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.team-img {
+  width: 175px;
+  height: 175px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.memberName {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.memberRole {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+
+.imageWrapper{
+ max-width: 644px;
+    height: 378px;
+}
+}
