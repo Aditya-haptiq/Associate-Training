@@ -1,12 +1,17 @@
-* {
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
+
+
+
+
 
 /* Container */
 .container {
@@ -110,6 +115,7 @@ font-weight: 400;
 }
 
 .heroHeading {
+     font-family: 'Crimson Text', serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 125%;
@@ -171,6 +177,7 @@ margin-bottom: 16px;
   color: #000000;
 font-weight: 700;
 font-size: 40px;
+font-family: "Crimson Text", serif;
 line-height: 125%;
 letter-spacing: 0px;
 text-align: center;
@@ -250,6 +257,7 @@ margin-bottom: 16px;
 }
 
 .featureTextBox h3 {
+font-family: "Crimson Text", serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 125%;
@@ -349,7 +357,7 @@ margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1180px;
+  /* max-width: 1180px; */
   margin: 0 auto;
   padding: 0 60px;
 }
@@ -365,21 +373,17 @@ margin-bottom: 16px;
   transition: opacity 0.3s ease;
 }
 
-.socialIcons a:hover {
-  opacity: 0.8;
-}
-
 .footerText {
-  font-weight: 400;
-  font-size: 14px;
-  color: #fff;
+  font-size: 20px;
+    font-weight: 400;
+    line-height: 125%;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
 }
 
 
 
-/* -------------------------- */
-/* Tablet View: ≤ 992px */
-/* -------------------------- */
+/* 992 */
 @media (max-width: 992px) {
  .container{
         max-width: 100%;
@@ -398,11 +402,6 @@ margin-bottom: 16px;
     cursor: pointer;
   }
 
-  /* .navBarWrap {
-    justify-content: space-between;
-    align-items: center;
-  } */
-
   /* Hero Section */
   .heroContentWrap {
     flex-direction: column;
@@ -417,7 +416,7 @@ margin-bottom: 16px;
 
   .heroTextBox {
     order: 2;
-    text-align: center;
+    text-align: left;
   }
 
   .heroTextBox h1 {
@@ -459,10 +458,13 @@ margin-bottom: 16px;
     gap: 40px;
   }
 
-  .featureImageBox,
-  .featureTextBox {
+  .featureImageBox{
+    width: 335px;
+    height: 240px;
+  }
+  .featureImageBox img {
     width: 100%;
-    max-width: 100%;
+    height: 100%;
   }
 
   .featureTextBox h3 {
@@ -496,13 +498,8 @@ margin-bottom: 16px;
   }
 }
 
-/* -------------------------- */
-/* Mobile View: ≤ 768px */
-/* -------------------------- */
+/* 768 viewport */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
 
   /* Navbar */
   .navLinks {
@@ -536,7 +533,7 @@ margin-bottom: 16px;
 
   .heroTextBox {
     order: 2;
-    text-align: center;
+    text-align: left;
   }
 
   .heroTextBox h1 {
@@ -560,7 +557,7 @@ margin-bottom: 16px;
     gap: 30px;
   }
 
-  .sectionHeading {
+  /* .sectionHeading {
     font-size: 24px;
   }
 
@@ -568,21 +565,16 @@ margin-bottom: 16px;
     width: 100%;
     max-width: 200px;
     margin: 0 auto;
-  }
+  } */
 
   /* Features Section */
-  .featureWrap,
+  /* .featureWrap,
   .featureWrap.reverse {
     flex-direction: column;
     text-align: center;
     gap: 30px;
   }
 
-  .featureImageBox,
-  .featureTextBox {
-    width: 100%;
-    max-width: 100%;
-  }
 
   .featureTextBox h3 {
     font-size: 22px;
@@ -596,7 +588,7 @@ margin-bottom: 16px;
     width: 100%;
     max-width: 200px;
     margin: 0 auto;
-  }
+  } */
 
   /* Team Section */
   .teamCards {
@@ -622,10 +614,5 @@ margin-bottom: 16px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
-  }
-
-  .footerText {
-    font-size: 14px;
-    text-align: center;
   }
 }

@@ -1,4 +1,4 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -133,7 +133,7 @@ font-weight: 400;
 }
 
 .servicesHeading {
-  font-family: 'Crimson Text', serif;
+font-family: "Crimson Text", serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 125%;
@@ -152,7 +152,7 @@ font-weight: 400;
 
 .cardsWrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 50px;
   flex-wrap: wrap;
 }
@@ -237,7 +237,7 @@ font-weight: 400;
 /* Responsive */
 @media (max-width: 992px) {
 
-    .navLinks {
+  .navLinks {
     display: none;
   }
 
@@ -284,10 +284,6 @@ font-weight: 400;
 
 
 @media (max-width: 768px) {
-      .container {
-    padding: 0 20px;
-  }
-
   .navLinks {
   display: none;
 }
