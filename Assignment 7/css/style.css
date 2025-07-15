@@ -32,19 +32,21 @@
 .partner-logo {
   max-width: 160px;
   max-height: 50px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
+.partnerDisplay{
+  padding: 2.5px 0px;
+  margin-bottom: 55px;
+  gap: 40px 10px;
+}
 
 .imageWrap{
    max-width: 599px; 
    height: 431px;
-    object-fit: cover"
+    object-fit: contain;
 }
 
-.font-crimson {
-  font-family: 'Crimson Text', serif;
-}
 
 .featureImageBox {
   max-width: 599px;
