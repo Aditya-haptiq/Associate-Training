@@ -5,6 +5,14 @@
     background-color: #74C69D;
 }
 
+
+.pColor{
+  color: rgba(33, 37, 41, 0.5)
+}
+
+.customColor{
+  color: #74C69D;
+}
 .letter-spacing-wide {
   letter-spacing: 5px;
 }
@@ -71,7 +79,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 125%;
-  color: #212529cc; 
+  color: rgba(33, 37, 41, 0.5);
   margin-bottom: 16px;
 }
 
