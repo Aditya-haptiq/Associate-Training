@@ -10,8 +10,7 @@ const loadCartState = () => {
   }
 };
 
-
-
+// Save cart state to localStorage
 const saveCartState = (state) => {
   try {
     localStorage.setItem('cart', JSON.stringify(state));
@@ -28,6 +27,7 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { product, size = 'M', quantity = 1 } = action.payload;
+
       const existingItem = state.items.find(
         item => item.id === product.id && item.size === size
       );
@@ -39,24 +39,30 @@ const cartSlice = createSlice({
           ...product,
           size,
           quantity,
-          cartId: `${product.id}-${size}-${Date.now()}`
+          cartId: crypto.randomUUID()  
         });
       }
+
       saveCartState(state);
     },
+
     removeFromCart: (state, action) => {
       const cartId = action.payload;
       state.items = state.items.filter(item => item.cartId !== cartId);
       saveCartState(state);
     },
+
     updateQuantity: (state, action) => {
       const { cartId, quantity } = action.payload;
       const item = state.items.find(item => item.cartId === cartId);
+
       if (item && quantity > 0) {
         item.quantity = quantity;
       }
+
       saveCartState(state);
     },
+
     clearCart: (state) => {
       state.items = [];
       saveCartState(state);

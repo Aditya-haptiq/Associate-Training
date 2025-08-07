@@ -1,4 +1,3 @@
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const loadAuthState = () => {
@@ -19,7 +18,6 @@ const loadAuthState = () => {
   }
 };
 
-
 const saveAuthState = (state) => {
   try {
     localStorage.setItem('auth', JSON.stringify(state));
@@ -37,10 +35,10 @@ const authSlice = createSlice({
     register: (state, action) => {
       const { email, password, name } = action.payload;
       const existingUser = state.users.find(user => user.email === email);
-      
+
       if (!existingUser) {
         const newUser = {
-          id: Date.now().toString(),
+          id: crypto.randomUUID(),  
           email,
           password,
           name,
@@ -52,16 +50,18 @@ const authSlice = createSlice({
         saveAuthState(state);
       }
     },
+
     login: (state, action) => {
       const { email, password } = action.payload;
       const user = state.users.find(u => u.email === email && u.password === password);
-      
+
       if (user) {
         state.user = { id: user.id, email: user.email, name: user.name };
         state.isAuthenticated = true;
         saveAuthState(state);
       }
     },
+
     logout: (state) => {
       state.isAuthenticated = false;
       state.user = null;
