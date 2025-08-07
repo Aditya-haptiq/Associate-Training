@@ -11,7 +11,7 @@ const About = () => {
 
   const team = [
     {
-      name: 'Aditya Kulkarni',
+      name: 'Aditya R Kulkarni',
       role: 'Founder & CEO',
       image: '/src/assets/character2.jpg',
       description: 'Passionate about bringing quality fashion to everyone.'
