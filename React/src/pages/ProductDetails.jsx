@@ -14,6 +14,7 @@ const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState("M");
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const products = useSelector(state => state.products.items);
   const wishlistItems = useSelector(state => state.wishlist.items);
@@ -37,7 +38,8 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     dispatch(addToCart({ product, size: selectedSize, quantity }));
-    alert('Added to cart!');
+    setSuccessMessage("Added to cart!");
+    setTimeout(() => setSuccessMessage(""), 2500); // auto-clear in 2.5s
   };
 
   const handleWishlistToggle = () => {
@@ -51,7 +53,7 @@ const ProductDetails = () => {
   return (
     <div className='min-h-screen bg-gray-50 py-8'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Back Button */}
+
         <button onClick={() => navigate(-1)} className="flex items-center space-x-2 text-gray-600 mb-4">
           <ArrowLeft className="w-5 h-5" />
           <span>Back to product</span>
@@ -59,6 +61,7 @@ const ProductDetails = () => {
 
         <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+
             {/* Product Image */}
             <div className='p-8'>
               <div className='bg-gray-100 rounded-lg overflow-hidden mb-4'>
@@ -71,12 +74,10 @@ const ProductDetails = () => {
               <span className='text-sm text-primary-600 font-medium uppercase'>{product.category}</span>
               <h1 className='text-3xl font-bold text-gray-800 mt-2 mb-4'>{product.title}</h1>
 
-              {/* Price */}
               <div className='mb-6'>
                 <span className='text-4xl font-bold text-primary-600'>${product.price}</span>
               </div>
 
-              {/* Description */}
               <p className='text-gray-600 mb-8'>{product.description}</p>
 
               {/* Size selection */}
@@ -112,6 +113,13 @@ const ProductDetails = () => {
                   </button>
                 </div>
               </div>
+
+              {/* Inline Feedback */}
+              {successMessage && (
+                <div className="mb-4 text-green-600 font-medium bg-green-100 px-4 py-2 rounded-lg">
+                  {successMessage}
+                </div>
+              )}
 
               {/* Buttons */}
               <div className='flex space-x-4'>

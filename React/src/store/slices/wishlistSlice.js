@@ -5,11 +5,11 @@ const loadWishlistState = () => {
     const serializedState = localStorage.getItem('wishlist');
     return serializedState ? JSON.parse(serializedState) : { items: [] };
   } catch (err) {
-    console.log(err);
-
+    console.error('Could not load wishlist state', err);
     return { items: [] };
   }
 };
+
 
 const saveWishlistState = (state) => {
   try {

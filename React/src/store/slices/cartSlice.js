@@ -5,11 +5,12 @@ const loadCartState = () => {
     const serializedState = localStorage.getItem('cart');
     return serializedState ? JSON.parse(serializedState) : { items: [] };
   } catch (err) {
-    console.log(err);
-    
+    console.error('Could not load cart state', err);
     return { items: [] };
   }
 };
+
+
 
 const saveCartState = (state) => {
   try {

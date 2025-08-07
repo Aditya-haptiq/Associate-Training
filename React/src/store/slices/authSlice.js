@@ -10,8 +10,7 @@ const loadAuthState = () => {
       users: []
     };
   } catch (err) {
-    console.log(err);
-    
+    console.error('Could not load auth state', err);
     return {
       isAuthenticated: false,
       user: null,
@@ -19,6 +18,7 @@ const loadAuthState = () => {
     };
   }
 };
+
 
 const saveAuthState = (state) => {
   try {

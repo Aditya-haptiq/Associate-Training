@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Heart, ShoppingCart ,Star} from 'lucide-react';
+import { Heart, ShoppingCart, Star } from 'lucide-react';
 import { addToCart } from '../../store/slices/cartSlice';
 import { addToWishlist, removeFromWishlist } from '../../store/slices/wishlistSlice';
 
@@ -13,23 +13,27 @@ const ProductCard = ({ product }) => {
   const wishlistItems = useSelector((state) => state.wishlist.items);
   const isInWishlist = wishlistItems.some((item) => item.id === product.id);
 
+  const [imageSrc, setImageSrc] = useState(product.image || defaultFallbackImage);
+  const [feedbackMessage, setFeedbackMessage] = useState(null);
+
   const handleAddToCart = (e) => {
     e.preventDefault();
     dispatch(addToCart({ product, size: 'M', quantity: 1 }));
-      alert(`${product.title} has been added to your cart.`);
-
+    setFeedbackMessage(`${product.title} added to cart`);
+    setTimeout(() => setFeedbackMessage(null), 2000);
   };
 
   const handleWishlistToggle = (e) => {
-  e.preventDefault();
-  if (isInWishlist) {
-    dispatch(removeFromWishlist(product.id));
-    alert(`${product.title} has been removed from your wishlist.`);
-  } else {
-    dispatch(addToWishlist(product));
-    alert(`${product.title} has been added to your wishlist.`);
-  }
-};
+    e.preventDefault();
+    if (isInWishlist) {
+      dispatch(removeFromWishlist(product.id));
+      setFeedbackMessage(`${product.title} removed from wishlist`);
+    } else {
+      dispatch(addToWishlist(product));
+      setFeedbackMessage(`${product.title} added to wishlist`);
+    }
+    setTimeout(() => setFeedbackMessage(null), 2000);
+  };
 
   const renderStars = (rating) => {
     const stars = [];
@@ -57,9 +61,6 @@ const ProductCard = ({ product }) => {
 
     return stars;
   };
-
-  // fallback image handler
-  const [imageSrc, setImageSrc] = useState(product.image || defaultFallbackImage);
 
   return (
     <div className="card group overflow-hidden animate-fade-in">
@@ -96,18 +97,14 @@ const ProductCard = ({ product }) => {
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-500 capitalize">{product.category}</span>
             <div className="flex items-center space-x-1">
-              <span className="text-sm text-gray-500 ml-1">({product.rating?.count || 0})</span>
-            <div className="flex items-center space-x-1">
               {renderStars(product.rating.rate)}
               <span className="text-sm text-gray-500 ml-1">({product.rating.count})</span>
-            </div>
             </div>
           </div>
 
           <h3 className="font-semibold text-gray-800 mb-2 line-clamp-2 group-hover:text-primary-600 transition-colors duration-200">
             {product.title}
           </h3>
-          
 
           <div className="flex items-center justify-between">
             <span className="text-2xl font-bold text-primary-600">${product.price}</span>
@@ -125,6 +122,12 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
       </Link>
+
+      {feedbackMessage && (
+        <div className="mt-2 text-sm text-green-600 text-center transition-opacity duration-300">
+          {feedbackMessage}
+        </div>
+      )}
     </div>
   );
 };
