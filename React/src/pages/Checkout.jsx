@@ -32,6 +32,8 @@ const Checkout = () => {
   const [selectedPayment, setSelectedPayment] = useState('card');
   const [errors, setErrors] = useState({});
   const [isProcessing, setIsProcessing] = useState(false);
+    const [orderSuccess, setOrderSuccess] = useState(false); 
+
 
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   const shipping = subtotal > 50 ? 0 : 10;
@@ -123,7 +125,7 @@ const Checkout = () => {
       zipCode: formData.zipCode,
       country: formData.country
     }));
-    dispatch(setPaymentInfo({
+ dispatch(setPaymentInfo({
       method: selectedPayment,
       data:
         selectedPayment === 'card'
@@ -138,11 +140,13 @@ const Checkout = () => {
           : { walletNumber: formData.walletNumber }
     }));
 
-    setTimeout(() => {
+     setTimeout(() => {
       dispatch(clearCart());
       setIsProcessing(false);
-      alert('Order placed successfully!');
-      navigate('/OrderPlaced');
+      setOrderSuccess(true); // ✅ trigger message
+      setTimeout(() => {
+        navigate('/OrderPlaced');
+      }, 1500);
     }, 2000);
   };
 
@@ -305,6 +309,12 @@ const Checkout = () => {
           >
             {isProcessing ? 'Processing...' : `Place Order - $${total.toFixed(2)}`}
           </button>
+            {orderSuccess && (
+            <p className="mt-4 text-green-600 font-semibold text-center">
+              ✅ Thank you! Your order has been placed.
+            </p>
+          )}
+
           <p className="text-center text-xs text-gray-400 mt-4">Your payment is secure and encrypted</p>
         </div>
       </div>
