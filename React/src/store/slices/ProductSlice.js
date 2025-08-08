@@ -1,16 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// ✅ Async thunk for fetching products
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async () => {
-    const response1 = await fetch("https://fakestoreapi.com/products");
-    const menClothing = await response1.json();
+    const menProductsResponse = await fetch("https://fakestoreapi.com/products");
+    const menClothing = await menProductsResponse.json();
 
-    const response2 = await fetch("https://fakestoreapi.com/products/category/women%27s%20clothing");
-    const womenClothing = await response2.json();
+    const womenProductsResponse = await fetch("https://fakestoreapi.com/products/category/women%27s%20clothing");
+    const womenClothing = await womenProductsResponse.json();
 
-    
     const isValidImage = (url) => {
       return typeof url === 'string' && url.startsWith('https://');
     };
@@ -21,7 +19,6 @@ export const fetchProducts = createAsyncThunk(
       return 'https://picsum.photos/300/300';
     };
 
-    // ✅ Enhance products with extra fields and safe image
     const enhancedProducts = [...menClothing, ...womenClothing].map(product => ({
       ...product,
       image: isValidImage(product.image) ? product.image : fallbackImage(product.category),
@@ -37,7 +34,7 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
-// ✅ Initial state
+
 const initialState = {
   items: [],
   filteredItems: [],
@@ -51,16 +48,14 @@ const initialState = {
   }
 };
 
-// ✅ Filters & Sorting helper
 const applyFiltersAndSort = (items, filters, sortBy) => {
   let filtered = [...items];
 
-  // Category filter
+  
   if (filters.category !== 'all') {
     filtered = filtered.filter(item => item.category === filters.category);
   }
 
-  // Price range filter
   filtered = filtered.filter(
     item => item.price >= filters.priceRange[0] && item.price <= filters.priceRange[1]
   );
@@ -86,7 +81,7 @@ const applyFiltersAndSort = (items, filters, sortBy) => {
   return filtered;
 };
 
-// Slice
+// ✅ Slice
 const productsSlice = createSlice({
   name: 'products',
   initialState,

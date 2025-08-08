@@ -15,7 +15,7 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold">Clothify</span>
             </div>
-            <p className='text-grey-400 text-sm leading-6'>Your ultimate destination for premium fashion and clothing. We bring you the latest trends with uncompromising quality.</p>
+            <p className='text-gray-400 text-sm leading-6'>Your ultimate destination for premium fashion and clothing. We bring you the latest trends with uncompromising quality.</p>
               <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Facebook className="w-5 h-5" />

@@ -39,7 +39,7 @@ const ProductDetails = () => {
   const handleAddToCart = () => {
     dispatch(addToCart({ product, size: selectedSize, quantity }));
     setSuccessMessage("Added to cart!");
-    setTimeout(() => setSuccessMessage(""), 2500); // auto-clear in 2.5s
+    setTimeout(() => setSuccessMessage(""), 2500); 
   };
 
   const handleWishlistToggle = () => {
@@ -125,9 +125,9 @@ const ProductDetails = () => {
               <div className='flex space-x-4'>
                 <button 
                   onClick={handleAddToCart}
-                  className="flex-1 flex items-center justify-center space-x-2 bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg bg-gray-900"
+                  className="flex-1 flex items-center justify-center space-x-2 bg-primary-500 hover:bg-primary-600 text-black font-semibold py-3 px-6 rounded-lg"
                 >
-                  <ShoppingCart className='w-5 h-5 text-white' />
+                  <ShoppingCart className='w-5 h-5 text-black' />
                   <span>Add to Cart</span>
                 </button>
 
